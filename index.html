@@ -6,6 +6,7 @@
 </head>
 <body>
   <script>
+    
     function computerPlay() {
       {
       answer = Math.floor(Math.random()*3) + 1;
@@ -14,8 +15,17 @@
       return "Scissors";
     } else if (answer == 2) {
       return "Paper";
-    } else return "Rock";
-  }
+    } else {
+      return "Rock";
+      }
+    }
+   
+    const playerSelection = "rock";
+    const computerSelection = computerPlay();
+    
+    function playRound(playerSelection, computerSelection) {
+      console.log("Correct!");
+    }
 
 
   </script>
