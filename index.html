@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Page Title</title>
+  <title>Rock Paper Scissors</title>
   <meta charset="UTF-8"/>
 </head>
 <body>
   <script>
-    
+    function computerPlay() {
+      {
+      answer = Math.floor(Math.random()*3) + 1;
+    }
+    if (answer == 3){
+      console.log("Scissors");
+    } else if (answer == 2) {
+      console.log("Paper");
+    } else console.log("Rock");
+  }
   </script>
 </body>
 </html>
