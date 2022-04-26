@@ -24,16 +24,30 @@
 
     const content = document.createElement('div');
     content.classList.add('content');
-    content.textContent = 'Results';
+   
+    content.textContent = '';
 
     container.appendChild(content);
     
+
     const buttons = document.querySelectorAll('button');
 
     buttons.forEach((button) => {
       button.addEventListener('click', () => {
-      playerSelection = button.id;
+      playerSelection = button.id;//assigns value to playerSelection
       console.log(playerSelection);
+      computerPlay();//calls function to create computerSelection
+      playRound(playerSelection, computerSelection);
+      
+      console.log(wins);
+      console.log(losses);
+      
+      content.textContent = wins + losses
+       if (wins > losses){
+         content.textContent = "Wins: " + wins + " Losses: " + losses + " You Win the Game!";//displays results on screen
+       } else if (wins < losses){
+         content.textContent = "Wins: " + wins + " Losses: " + losses + " You Lose the Game.";}
+         else content.textContent = "Wins: " + wins + " Losses: " + losses + " It's a Tie."
     })
   })
 
